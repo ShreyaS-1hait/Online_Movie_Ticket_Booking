@@ -1,0 +1,88 @@
+generator client {
+  provider   = "prisma-client-js"
+  engineType = "binary"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            Int       @id @default(autoincrement())
+  name          String
+  email         String    @unique
+  passwordHash  String
+  createdAt     DateTime  @default(now())
+  bookings      Booking[]
+}
+
+model Movie {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  duration    Int      // minutes
+  language    String
+  genre       String
+  posterUrl   String
+  releaseDate DateTime
+  shows       Show[]
+}
+
+model Theater {
+  id      Int      @id @default(autoincrement())
+  name    String
+  city    String
+  address String
+  screens Screen[]
+}
+
+model Screen {
+  id         Int     @id @default(autoincrement())
+  theaterId  Int
+  theater    Theater @relation(fields: [theaterId], references: [id])
+  name       String
+  totalSeats Int
+  shows      Show[]
+  seats      Seat[]
+}
+
+model Show {
+  id        Int       @id @default(autoincrement())
+  movieId   Int
+  movie     Movie     @relation(fields: [movieId], references: [id])
+  screenId  Int
+  screen    Screen    @relation(fields: [screenId], references: [id])
+  startTime DateTime
+  price     Float
+  bookings  Booking[]
+}
+
+model Seat {
+  id           Int             @id @default(autoincrement())
+  screenId     Int
+  screen       Screen          @relation(fields: [screenId], references: [id])
+  seatNumber   String          // e.g. "A1", "B5"
+  type         String          // "regular", "premium"
+  bookingSeats BookingSeat[]
+}
+
+model Booking {
+  id           Int             @id @default(autoincrement())
+  userId       Int
+  user         User            @relation(fields: [userId], references: [id])
+  showId       Int
+  show         Show            @relation(fields: [showId], references: [id])
+  totalPrice   Float
+  status       String          // "confirmed", "cancelled"
+  createdAt    DateTime        @default(now())
+  bookingSeats BookingSeat[]
+}
+
+model BookingSeat {
+  id        Int     @id @default(autoincrement())
+  bookingId Int
+  booking   Booking @relation(fields: [bookingId], references: [id])
+  seatId    Int
+  seat      Seat    @relation(fields: [seatId], references: [id])
+}
