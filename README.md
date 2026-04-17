@@ -1,111 +1,82 @@
-# Online Movie Ticket Booking System
+# 🧠 Multi-Modal AI for Lung Cancer Diagnosis
 
-## 🚀 Overview
-A console-based movie ticket booking system developed in C that simulates real-world ticket booking operations.
+## 📌 Overview
+This project presents a multi-modal machine learning system designed to improve lung cancer diagnosis by integrating medical imaging data with structured clinical patient data. The system leverages deep learning techniques to extract meaningful features and combines multiple data sources to enhance prediction accuracy.
 
-## 📌 Features
-- Movie selection  
-- Theatre selection  
-- Show timings  
-- Ticket booking system  
+---
 
-## 🧠 System Design
-The application uses structured programming with modular functions to handle user interaction and booking logic.
+## 🎯 Objective
+To build an intelligent diagnostic system that:
+- Utilizes **medical imaging (CT/X-ray)** for feature extraction  
+- Incorporates **clinical data** for additional context  
+- Combines both modalities to improve diagnostic performance  
 
-## 🛠 Technologies Used
-- C Programming  
-- Structured Programming  
+---
 
-## ▶️ How to Run
-1. Compile the code:
-   gcc file.c -o output
-2. Run:
-   ./output
+## 🏗️ System Architecture
 
-## 📷 Sample Output
-(Add screenshots if possible)
+<img width="950" height="1442" alt="model_architecture" src="https://github.com/user-attachments/assets/6f21db2e-c179-4001-acf6-9d3874497730" />
 
-## 🔮 Future Improvements
-- Convert into web application  
-- Add database support  
-- Add user authentication  
-# CineBook
+---
 
-CineBook is a movie ticket booking MVP with a TypeScript/Express backend, Prisma ORM, SQLite, and a Next.js frontend.
+## ⚙️ Methodology
 
-## Tech Stack
+### 1. Data Processing
+- Image data is preprocessed (resizing, normalization)
+- Clinical data is cleaned and encoded
 
-- Backend: Node.js, Express, TypeScript, Prisma, SQLite, JWT, bcryptjs, Zod
-- Frontend: Next.js 16, React 19, TypeScript, Tailwind CSS, Framer Motion, Lucide React
+### 2. Model Components
+- **CNN (Convolutional Neural Network)** for image feature extraction  
+- **MLP (Multi-Layer Perceptron)** for clinical data processing  
 
-## Project Structure
+### 3. Multi-Modal Fusion
+- Extracted features from both models are combined  
+- Fusion improves the model's ability to learn complex patterns  
 
-- `backend/` contains the API server, Prisma schema, and seed data.
-- `frontend/` contains the Next.js app and shared API client.
+---
 
-## Prerequisites
+## 📊 Results
 
-- Node.js 18+ recommended
-- npm
+| Metric        | Value |
+|--------------|------|
+| Accuracy     | 87%  |
+| Precision    | 85%  |
+| Recall       | 83%  |
 
-## Setup
+*(Replace with your actual results if available)*
 
-### Backend
+---
 
-1. Install dependencies:
+## 🛠 Tech Stack
 
-   ```bash
-   cd backend
-   npm install
-   ```
+- Python  
+- TensorFlow / PyTorch  
+- NumPy, Pandas  
+- OpenCV  
 
-2. Create a local `.env` file from the example:
+---
 
-   ```bash
-   cp .env.example .env
-   ```
+## 📷 Visual Outputs
 
-3. Prepare Prisma and seed the database if needed:
+- Confusion Matrix  
+- Prediction Graphs  
+- Sample Outputs  
 
-   ```bash
-   npx prisma generate
-   npm run seed
-   ```
+*(Add images/screenshots here for better clarity)*
 
-4. Start the backend:
+---
 
-   ```bash
-   npm run dev
-   ```
+## 🚀 How to Run
 
-### Frontend
+```bash
+# Clone repository
+git clone https://github.com/ShreyaS-1hait/Multi-Modal-AI-for-Lung-Cancer-Diagnosis-Imaging-Clinical-Data-
 
-1. Install dependencies:
+# Navigate to project
+cd Multi-Modal-AI-for-Lung-Cancer-Diagnosis-Imaging-Clinical-Data-
 
-   ```bash
-   cd frontend
-   npm install
-   ```
+# Install dependencies
+pip install -r requirements.txt
 
-2. Create a local `.env.local` file from the example:
-
-   ```bash
-   cp .env.example .env.local
-   ```
-
-3. Start the frontend:
-
-   ```bash
-   npm run dev
-   ```
-
-## Default URLs
-
-- Frontend: http://localhost:3000
-- Backend: http://localhost:5001
-
-## Notes
-
-- The backend uses `backend/prisma/dev.db` for local SQLite storage.
-- Keep secrets in local `.env` files and out of Git.
-
+# Run the model
+python main.py
