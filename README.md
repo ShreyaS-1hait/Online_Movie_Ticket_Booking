@@ -58,11 +58,14 @@ To build an intelligent diagnostic system that:
 
 ## 📷 Visual Outputs
 
-- Confusion Matrix  
-- Prediction Graphs  
-- Sample Outputs  
+<img width="1110" height="880" alt="confusion_matrix" src="https://github.com/user-attachments/assets/2e7216b5-8997-4d25-b85c-ac48b80aa220" />
 
-*(Add images/screenshots here for better clarity)*
+<img width="2084" height="732" alt="training_results" src="https://github.com/user-attachments/assets/b3ae4c9f-211a-4d67-b1cb-426841a13684" />
+
+<img width="1116" height="403" alt="Sample CT Scan Images" src="https://github.com/user-attachments/assets/e30b0d78-9932-4388-84df-a9950f61d08c" />
+
+<img width="1394" height="312" alt="Streamlit Dashboard-1" src="https://github.com/user-attachments/assets/5cd919fa-80f7-40d4-a7fb-d8f3a08108ce" />
+
 
 ---
 
