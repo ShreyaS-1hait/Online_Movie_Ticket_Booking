@@ -1,52 +1,58 @@
----
-
-# 🎬 FINAL — MOVIE BOOKING README (COMPLETE)
-
-```markdown
-# 🎬 Online Movie Ticket Booking System
+# 🎬 Online Movie Ticket Booking System (C)
 
 ## 📌 Overview
-This project is a console-based movie ticket booking system developed in C. It simulates real-world ticket booking operations including movie selection, show timing, and ticket management.
+This project is a console-based movie ticket booking system developed using C. It simulates the core functionalities of a real-world ticket booking process through a menu-driven interface.
+
+The application focuses on implementing structured programming concepts and logical flow control to handle user interactions and booking operations.
 
 ---
 
-## 🎯 Objective
-To implement a structured program that mimics a basic ticket booking system using core programming concepts.
+## 🎯 Objectives
+- To design a basic ticket booking system using C
+- To implement modular programming using functions
+- To simulate real-world booking flow in a console environment
 
 ---
 
 ## ⚙️ Features
 
-- 🎥 Movie Selection  
-- 🏢 Theatre Selection  
-- ⏰ Show Timings  
-- 🎟 Ticket Booking  
-- 📋 Booking Summary  
+- 🎥 View available movies  
+- 🏢 Select theatre options  
+- ⏰ Choose show timings  
+- 🎟 Book tickets  
+- 📋 Display booking summary  
 
 ---
 
 ## 🏗️ System Design
 
-The application follows a modular approach using:
-- Functions for each operation  
-- Structured programming techniques  
-- Menu-driven interface  
+The system is built using a modular approach:
+- Each operation is handled by separate functions  
+- Menu-driven navigation using switch-case statements  
+- Sequential flow of booking process  
+
+### Workflow:
+
+Start → Display Menu → User Selection → Booking Process → Confirmation → Exit
 
 ---
 
-## 🛠 Technologies Used
+## 🛠️ Technologies Used
 
-- C Programming  
-- Structured Programming Concepts  
+- Programming Language: C  
+- Concepts Used:
+  - Functions  
+  - Conditional statements  
+  - Loops  
+  - Structured programming  
 
 ---
 
 ## 🚀 How to Run
 
+### Step 1: Compile
 ```bash
-# Compile the program
-gcc movie.c -o movie
+gcc main.c -o movie_booking
 
-# Run the program
-./movie
-
+### Step 2: Execute
+./movie_booking
