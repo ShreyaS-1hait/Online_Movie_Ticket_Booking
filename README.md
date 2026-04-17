@@ -1,3 +1,34 @@
+# Online Movie Ticket Booking System
+
+## 🚀 Overview
+A console-based movie ticket booking system developed in C that simulates real-world ticket booking operations.
+
+## 📌 Features
+- Movie selection  
+- Theatre selection  
+- Show timings  
+- Ticket booking system  
+
+## 🧠 System Design
+The application uses structured programming with modular functions to handle user interaction and booking logic.
+
+## 🛠 Technologies Used
+- C Programming  
+- Structured Programming  
+
+## ▶️ How to Run
+1. Compile the code:
+   gcc file.c -o output
+2. Run:
+   ./output
+
+## 📷 Sample Output
+(Add screenshots if possible)
+
+## 🔮 Future Improvements
+- Convert into web application  
+- Add database support  
+- Add user authentication  
 # CineBook
 
 CineBook is a movie ticket booking MVP with a TypeScript/Express backend, Prisma ORM, SQLite, and a Next.js frontend.
@@ -77,3 +108,4 @@ CineBook is a movie ticket booking MVP with a TypeScript/Express backend, Prisma
 
 - The backend uses `backend/prisma/dev.db` for local SQLite storage.
 - Keep secrets in local `.env` files and out of Git.
+
